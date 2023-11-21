@@ -29,8 +29,8 @@ export const DoctorCard = ({ doctor }) => {
       </div>
       <div className="details">
         <h2>{name}</h2>
-        <h6>{doctorType}</h6>
-        <h6>{experience} years of experience overall</h6>
+        <h5>{doctorType}</h5>
+        <h5>{experience} years of experience overall</h5>
         <p>
           <b>{location}</b> &#183; {clinicName}
         </p>

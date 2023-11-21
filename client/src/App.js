@@ -1,17 +1,22 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Categories from "./components/Categories";
-import DoctorList from "./components/DoctorList";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home.js";
+import Doctors from "./pages/Doctors.js";
 
 function App() {
   return (
     <div className="app">
-      <Navbar />
-      <h1>Book an appointment for an in-clinic consultation</h1>
-      <h4>Find experienced doctors across all specialities</h4>
-      <Categories />
-      <DoctorList/>
+      <div className="header">
+        <p>DOCTORS APPOINTMENT</p>
+      </div>
+     
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/doctors/:category" element={<Doctors />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
